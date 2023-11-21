@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:icon="@drawable/ic_home" android:id="@+id/home" android:title="Home"/>
+        <item android:icon="@drawable/ic_profile" android:id="@+id/profile" android:title="Profile"/>
+        <item android:icon="@drawable/ic_comm" android:id="@+id/commstructure" android:title="Commission Structure"/>
+        <item android:icon="@drawable/coupon" android:id="@+id/mycoupons" android:title="Prime Coupons"/>
+        <item android:icon="@drawable/pancertificate" android:id="@+id/pancertificate" android:title="PAN Certificate"/>
+        <item android:icon="@drawable/irctccerti" android:id="@+id/irctccertificate" android:visible="false" android:title="IRCTC Certificate"/>
+        <item android:icon="@drawable/ic_tds" android:id="@+id/tdscertificate" android:title="194N TDS Exemption"/>
+        <item android:icon="@drawable/ic_certificate" android:id="@+id/certificates" android:title="Certificates"/>
+        <item android:icon="@drawable/ic_idcard" android:id="@+id/idcard" android:title="I&apos;d Card"/>
+        <item android:icon="@drawable/ic_report" android:id="@+id/reports" android:title="Reports"/>
+        <item android:icon="@drawable/ic_rateus" android:id="@+id/rateus" android:title="Rate Us"/>
+        <item android:icon="@drawable/ic_changepass" android:id="@+id/change_pass" android:title="Change Password"/>
+<!--        <item android:icon="@drawable/ic_logout" android:id="@+id/log_out" android:visible="false" android:title="Log Out"/>-->
+<!--        <item android:icon="@drawable/ic_fundtransfre" android:id="@+id/fund_transfer" android:visible="false" android:title="Fund Transfer"/>-->
+<!--        <item android:icon="@drawable/ic_contactus" android:id="@+id/contactUs" android:visible="false" android:title="Contact Us"/>-->
+<!--        <item android:icon="@drawable/ic_kys" android:id="@+id/followourservice" android:visible="false" android:title="Know Our Services"/>-->
+<!--        <item android:icon="@drawable/ic_folowsm" android:id="@+id/followsocialmedia" android:visible="false" android:title="Follow Social Media"/>-->
+<!--        <item android:icon="@drawable/ic_bankd" android:id="@+id/bnk" android:visible="false" android:title="Bank Details"/>-->
+<!--        <item android:icon="@drawable/ic_cande" android:id="@+id/help" android:visible="false" android:title="Complaints  &amp; Enquiry"/>-->
+<!--        <item android:icon="@drawable/ic_downloadb" android:id="@+id/downloadbanner" android:visible="false" android:title="Download Banner"/>-->
+<!--        <item android:icon="@drawable/drawerwh" android:id="@+id/wallet_history" android:visible="false" android:title="Wallet History"/>-->
+<!--        <item android:icon="@drawable/drawerth" android:id="@+id/tranhistory" android:visible="false" android:title="Transaction History"/>-->
+    </group>
+</menu>

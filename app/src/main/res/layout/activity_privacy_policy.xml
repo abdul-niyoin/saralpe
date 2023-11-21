@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_dark"
+    tools:context=".view.activities.PrivacyPolicyActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/top_layout"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/vertical_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical"
+            android:id="@+id/custom_app_bar"
+            android:layout_marginTop="@dimen/thirtySixDpMargin"
+            android:layout_marginStart="@dimen/sixteenDpMargin"
+            android:layout_marginEnd="@dimen/sixteenDpMargin"
+            >
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/sixteenDpMargin"
+                android:gravity="center"
+                >
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/back_primary_icon"
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="SARALPE"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/xmediumTextSize"
+                    android:textStyle="bold"
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/home_primary_icon"
+                    />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_layout"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/topleft_topright_round_white_bg"
+            android:orientation="vertical"
+            android:padding="@dimen/mediumPadding">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/eightDpMargin"
+                android:layout_weight="1"
+                android:lineSpacingExtra="2dp"
+                android:text="WE CARE ABOUT YOUR PRIVACY
+HERE Global B.V., including its affiliates (“HERE”), is committed to respect your privacy and to comply with applicable data protection and privacy laws. This privacy policy (“Policy”) describes how we collect and use personal data where HERE is the data controller or where we refer to the applicability of this Policy. “Personal data” means information relating to you or another identifiable individual.
+We will give you additional privacy information that is specific to a product or service in Supplements to this Policy and other notices you may see while using our products or services. If there is a difference between such notices and this Policy, the notices should be considered first. For additional information, check out HERE's Privacy Charter.
+Software on your device may access your information. Our products or services may contain links to, or may be embedded within, other companies’ websites and services that have privacy policies of their own. Where our products or services are embedded to products and services of our customers, we require our customers to provide necessary transparency to you. This might include linking to this Policy and the relevant Supplements, or providing the transparency in integrated and embedded notices which identify us as the service provider or controller.
+If you do not agree with this Policy, do not use our products and services or provide HERE with your personal data.
+
+WE CARE ABOUT YOUR PRIVACY
+HERE Global B.V., including its affiliates (“HERE”), is committed to respect your privacy and to comply with applicable data protection and privacy laws. This privacy policy (“Policy”) describes how we collect and use personal data where HERE is the data controller or where we refer to the applicability of this Policy. “Personal data” means information relating to you or another identifiable individual.
+We will give you additional privacy information that is specific to a product or service in Supplements to this Policy and other notices you may see while using our products or services. If there is a difference between such notices and this Policy, the notices should be considered first. For additional information, check out HERE's Privacy Charter.
+Software on your device may access your information. Our products or services may contain links to, or may be embedded within, other companies’ websites and services that have privacy policies of their own. Where our products or services are embedded to products and services of our customers, we require our customers to provide necessary transparency to you. This might include linking to this Policy and the relevant Supplements, or providing the transparency in integrated and embedded notices which identify us as the service provider or controller.
+If you do not agree with this Policy, do not use our products and services or provide HERE with your personal data.WE CARE ABOUT YOUR PRIVACY
+HERE Global B.V., including its affiliates (“HERE”), is committed to respect your privacy and to comply with applicable data protection and privacy laws. This privacy policy (“Policy”) describes how we collect and use personal data where HERE is the data controller or where we refer to the applicability of this Policy. “Personal data” means information relating to you or another identifiable individual."
+                android:textSize="@dimen/xsmallTextSize" />
+
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/sixteenDpMargin"
+        android:background="@drawable/round_button_with_stroke_design"
+        android:padding="@dimen/smallPadding"
+        android:text="BACK"
+        android:id="@+id/bottom_back_btn"
+        android:textAllCaps="false"
+        android:textColor="@color/gray4"
+        android:textSize="@dimen/sixteenTextSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

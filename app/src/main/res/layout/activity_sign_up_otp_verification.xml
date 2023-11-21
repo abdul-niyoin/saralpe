@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_dark"
+    tools:context=".view.activities.SignUpOtpVerificationActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/mask_group_background"
+        android:padding="@dimen/mediumPadding"
+        android:id="@+id/top_layout"
+        >
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/sixteenDpMargin"
+            >
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/sixteenDpMargin"
+                android:gravity="center"
+                >
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/back_button"
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Verify Phone"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/xmediumTextSize"
+                    android:textStyle="bold"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/sixteenDpMargin"
+                android:gravity="center"
+                >
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Enter the code sent to"
+                    android:textColor="@color/gray1"
+                    android:textSize="@dimen/mediumTextSize"
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/defaultDpMargin"
+                    android:text="(+91) 92555-0103"
+                    android:textColor="@color/secondary"
+                    android:textSize="@dimen/mediumTextSize"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/sixteenDpMargin"
+                android:gravity="center"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="0"
+                    android:maxLength="1"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="@dimen/xxlargeTextSize"
+                    android:inputType="number"
+                    android:textColorHint="@color/white"
+                    app:backgroundTint="@color/white"
+                    />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="0"
+                    android:maxLength="1"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="@dimen/xxlargeTextSize"
+                    android:inputType="number"
+                    android:textColorHint="@color/white"
+                    app:backgroundTint="@color/white"
+                    />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="0"
+                    android:maxLength="1"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="@dimen/xxlargeTextSize"
+                    android:inputType="number"
+                    android:textColorHint="@color/white"
+                    app:backgroundTint="@color/white"
+                    />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="0"
+                    android:maxLength="1"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="@dimen/xxlargeTextSize"
+                    android:inputType="number"
+                    android:textColorHint="@color/white"
+                    app:backgroundTint="@color/white"
+                    />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Didn't receive any code?"
+                    android:textColor="@color/gray1"
+                    android:textSize="@dimen/mediumTextSize"
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/defaultDpMargin"
+                    android:text="Resend Code"
+                    android:textColor="@color/primary"
+                    android:textSize="@dimen/mediumTextSize"
+                    />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_layout"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:padding="@dimen/xlargePadding"
+        android:background="@drawable/round_bg_with_primary_color"
+        android:textSize="@dimen/sixteenTextSize"
+        android:textColor="@color/white"
+        android:layout_marginStart="@dimen/TwentyDpMargin"
+        android:layout_marginEnd="@dimen/TwentyDpMargin"
+        android:layout_marginTop="@dimen/thirtySixDpMargin"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

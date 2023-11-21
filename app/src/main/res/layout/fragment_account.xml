@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragments.AccountFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bottomleft_bottomright_round_dark_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/top_layout"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/vertical_bg"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical"
+            android:id="@+id/custom_app_bar"
+            android:layout_marginTop="@dimen/thirtySixDpMargin"
+            android:layout_marginStart="@dimen/sixteenDpMargin"
+            android:layout_marginEnd="@dimen/sixteenDpMargin"
+            >
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/back_primary_icon"
+                    android:id="@+id/back_btn"
+                    android:visibility="gone"
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="My Profile"
+                    android:id="@+id/bbps_heading"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/xmediumTextSize"
+                    android:textStyle="bold"
+                    />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Balance"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/smallTextSize"
+                        android:textStyle="bold"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹ 0.0"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/smallTextSize"
+                        android:textStyle="bold"
+                        />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:gravity="center_vertical"
+               android:layout_marginTop="@dimen/tenDpMargin"
+               android:layout_marginBottom="@dimen/sixteenDpMargin"
+               >
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:padding="@dimen/mediumPadding"
+                   android:background="@drawable/round_bg_with_full_white_border"
+                   >
+                   <de.hdodenhof.circleimageview.CircleImageView
+                       android:id="@+id/profile_image"
+                       android:layout_width="56dp"
+                       android:layout_height="56dp"
+                       android:src="@drawable/dummy_image"
+                       app:civ_border_color="@color/white"
+                       app:civ_border_width="2dp"
+                       />
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+              <androidx.appcompat.widget.LinearLayoutCompat
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:orientation="vertical"
+                  android:layout_marginStart="@dimen/tenDpMargin"
+                  >
+                  <com.google.android.material.textview.MaterialTextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Bianca Cooper"
+                      android:textColor="@color/white"
+                      android:textSize="@dimen/large1TextSize"
+                      />
+                  <com.google.android.material.textview.MaterialTextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="8886767687"
+                      android:textColor="@color/gray1"
+                      android:textSize="@dimen/sixteenTextSize"
+                      />
+                  <com.google.android.material.textview.MaterialTextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="RT93C383"
+                      android:textColor="@color/gray1"
+                      android:textSize="@dimen/sixteenTextSize"
+                      />
+              </androidx.appcompat.widget.LinearLayoutCompat>
+           </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:fillViewport="true"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               android:layout_margin="@dimen/sixteenDpMargin"
+               >
+               <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Details"
+                   android:textAllCaps="true"
+                   android:textColor="@color/gray4"
+                   android:layout_marginTop="@dimen/sixteenDpMargin"
+                   android:textStyle="bold"
+                   android:textSize="@dimen/sixteenTextSize"
+                   android:gravity="center"
+                   android:drawablePadding="@dimen/mediumPadding"
+                   />
+
+
+              <com.google.android.material.textview.MaterialTextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Phone Number"
+                  android:textColor="@color/black"
+                  android:layout_marginTop="@dimen/thirtyTwoDpMargin"
+                  android:textAllCaps="true"
+                  android:textStyle="bold"
+                  android:textSize="@dimen/sixteenTextSize"
+                  android:gravity="center"
+                  android:drawablePadding="@dimen/mediumPadding"
+                  />
+
+               <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="8886767687"
+                   android:textColor="@color/black"
+                   android:layout_marginTop="@dimen/eightDpMargin"
+                   android:textSize="@dimen/sixteenTextSize"
+                   android:gravity="center"
+                   />
+
+               <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="USER NAME"
+                   android:textColor="@color/black"
+                   android:layout_marginTop="@dimen/thirtyTwoDpMargin"
+                   android:textStyle="bold"
+                   android:textAllCaps="true"
+                   android:textSize="@dimen/sixteenTextSize"
+                   android:gravity="center"
+                   android:drawablePadding="@dimen/mediumPadding"
+                   />
+
+               <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Rahul Singh"
+                   android:textColor="@color/black"
+                   android:layout_marginTop="@dimen/eightDpMargin"
+                   android:textSize="@dimen/sixteenTextSize"
+                   android:gravity="center"
+                   android:drawablePadding="@dimen/mediumPadding"
+                   />
+
+               <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="USER ID"
+                   android:textColor="@color/black"
+                   android:layout_marginTop="@dimen/thirtyTwoDpMargin"
+                   android:textStyle="bold"
+                   android:textAllCaps="true"
+                   android:textSize="@dimen/sixteenTextSize"
+                   android:gravity="center"
+                   android:drawablePadding="@dimen/mediumPadding"
+                   />
+
+               <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="RT93C383"
+                   android:textColor="@color/black"
+                   android:layout_marginTop="@dimen/eightDpMargin"
+                   android:textSize="@dimen/sixteenTextSize"
+                   android:gravity="center"
+                   android:drawablePadding="@dimen/mediumPadding"
+                   />
+
+               <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="ADDRESS"
+                   android:textColor="@color/black"
+                   android:layout_marginTop="@dimen/thirtyTwoDpMargin"
+                   android:textStyle="bold"
+                   android:textAllCaps="true"
+                   android:textSize="@dimen/sixteenTextSize"
+                   android:gravity="center"
+                   android:drawablePadding="@dimen/mediumPadding"
+                   />
+
+               <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Not Mentioned"
+                   android:textColor="@color/black"
+                   android:layout_marginTop="@dimen/eightDpMargin"
+                   android:textSize="@dimen/sixteenTextSize"
+                   android:gravity="center"
+                   android:drawablePadding="@dimen/mediumPadding"
+                   />
+
+           </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="@dimen/defaultDpMargin"
+    app:cardBackgroundColor="@color/primary"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="@dimen/mediumPadding"
+        android:layout_margin="@dimen/eightDpMargin"
+        >
+
+      <androidx.appcompat.widget.LinearLayoutCompat
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:layout_weight="1"
+          >
+          <com.google.android.material.textview.MaterialTextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="30% OFF"
+              android:textColor="@color/white"
+              android:textSize="@dimen/smallTextSize"
+              android:textStyle="bold"
+              android:id="@+id/top_heading"
+              />
+
+          <com.google.android.material.textview.MaterialTextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Black friday deal"
+              android:textColor="@color/white"
+              android:textSize="@dimen/xlargeTextSize"
+              android:layout_marginTop="@dimen/sixteenDpMargin"
+              android:textStyle="bold"
+              />
+
+          <com.google.android.material.textview.MaterialTextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Get discount for every topup,\ntransfer and payment"
+              android:textColor="@color/gray3"
+              android:textSize="@dimen/xsmallTextSize"
+              android:layout_marginTop="@dimen/sixteenDpMargin"
+              />
+      </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom"
+            >
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="30%"
+                android:textColor="@color/white"
+                android:textSize="@dimen/xlargeTextSize"
+                android:gravity="bottom"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activities.SignUpEmailActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/sixtyDpMargin"
+        android:src="@drawable/medium_logo"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/logo"
+
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        android:layout_margin="@dimen/sixteenDpMargin"
+        android:padding="@dimen/smallPadding"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Your Email"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/gray4"
+            android:paddingBottom="@dimen/xlargePadding"
+            android:layout_marginTop="@dimen/thirtySixDpMargin"
+            android:backgroundTint="@color/gray3"
+            />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="By creating an account, you accept our terms"
+            android:textAllCaps="false"
+            android:textSize="@dimen/smallTextSize"
+            android:textColor="@color/gray4"
+            android:layout_marginTop="@dimen/eightDpMargin"
+            android:layout_marginStart="@dimen/defaultDpMargin"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Continue"
+            android:textAllCaps="false"
+            android:padding="@dimen/xlargePadding"
+            android:background="@drawable/round_bg_with_primary_color"
+            android:textSize="@dimen/sixteenTextSize"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/TwentyDpMargin"
+            />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/sixteenDpMargin"
+            android:padding="@dimen/smallPadding"
+            android:gravity="center"
+            >
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account?"
+                android:textAllCaps="false"
+                android:textSize="@dimen/sixteenTextSize"
+                android:textColor="@color/gray4"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:textAllCaps="false"
+                android:textSize="@dimen/sixteenTextSize"
+                android:textColor="@color/primary_dark"
+                android:layout_marginStart="@dimen/tenDpMargin"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

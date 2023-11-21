@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/temp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="@dimen/smallPadding"
+        android:gravity="center_horizontal"
+        >
+
+       <androidx.appcompat.widget.LinearLayoutCompat
+           android:layout_width="wrap_content"
+           android:layout_height="0dp"
+           android:orientation="vertical"
+           android:layout_weight="1"
+           android:padding="@dimen/mediumPadding"
+           >
+           <androidx.appcompat.widget.AppCompatImageView
+               android:layout_width="36dp"
+               android:layout_height="36dp"
+               android:src="@drawable/aeps_services_icon"
+               android:id="@+id/icon"
+               />
+       </androidx.appcompat.widget.LinearLayoutCompat>
+
+       <com.google.android.material.textview.MaterialTextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Aeps\nServices"
+           android:textSize="@dimen/xsmallTextSize"
+           android:gravity="center"
+           android:textStyle="bold"
+           android:textColor="@color/black"
+           android:id="@+id/title"
+           />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#4D000000"
+        android:id="@+id/overlayout_view"
+        android:gravity="center"
+        android:text="Coming\nsoon"
+        android:visibility="gone"
+        android:textColor="@color/white"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

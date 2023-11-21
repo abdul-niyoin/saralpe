@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/defaultDpMargin"
+        android:background="@drawable/gray_bg_with_primary_color_border"
+        android:padding="@dimen/largePadding"
+        >
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                >
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RAHUL SINGH\nRAJAWAT"
+                    android:lineSpacingExtra="6dp"
+                    android:textColor="#1976D2"
+                    android:textSize="@dimen/xsmallTextSize"
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A/C No - 3547810000001"
+                    android:layout_marginTop="@dimen/sixteenDpMargin"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/xsmallTextSize"
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IFSC - BARB0COLABA"
+                    android:layout_marginTop="@dimen/tenDpMargin"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/xsmallTextSize"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="0dp"
+                    android:text="Verify"
+                    android:textAllCaps="false"
+                    android:padding="2dp"
+                    android:layout_marginTop="@dimen/defaultDpMargin"
+                    android:background="@drawable/filled_button_with_primary_color_bg"
+                    android:textSize="@dimen/sixteenTextSize"
+                    android:textColor="@color/white"
+                    />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                >
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="BANK OF BARODA"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/xsmallTextSize"
+                    />
+
+              <androidx.appcompat.widget.LinearLayoutCompat
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  >
+                  <com.google.android.material.textfield.TextInputEditText
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1"
+                      android:hint="Amount"
+                      android:inputType="number"
+                      android:textColorHint="@color/divider"
+                      android:backgroundTint="@color/gray3"
+                      />
+
+                  <androidx.appcompat.widget.AppCompatButton
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:minHeight="0dp"
+                      android:text="Pay"
+                      android:textAllCaps="false"
+                      android:layout_marginStart="@dimen/defaultDpMargin"
+                      android:padding="6dp"
+                      android:background="@drawable/filled_button_with_primary_color_bg"
+                      android:textSize="@dimen/smallTextSize"
+                      android:textColor="@color/white"
+                      />
+              </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

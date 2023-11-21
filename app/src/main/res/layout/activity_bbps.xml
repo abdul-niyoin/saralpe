@@ -1,0 +1,2201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_dark"
+    tools:context=".view.activities.bbps.BbpsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/top_layout"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/vertical_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical"
+            android:id="@+id/custom_app_bar"
+            android:layout_marginTop="@dimen/thirtySixDpMargin"
+            android:layout_marginStart="@dimen/sixteenDpMargin"
+            android:layout_marginEnd="@dimen/sixteenDpMargin"
+            >
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/sixteenDpMargin"
+                android:gravity="center"
+                >
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/back_primary_icon"
+                    android:id="@+id/back_btn"
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="DTH Recharge"
+                    android:id="@+id/bbps_heading"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/xmediumTextSize"
+                    android:textStyle="bold"
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:src="@drawable/home_primary_icon"
+                    />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:fillViewport="true"
+        >
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@drawable/topleft_topright_round_white_bg"
+           >
+
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:orientation="vertical"
+               android:padding="@dimen/mediumPadding"
+               android:id="@+id/bbps_dth_recharge_layout"
+               android:visibility="gone"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               >
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/money_transfer_bg"
+                   android:padding="@dimen/largePadding"
+                   />
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/round_bg_with_full_border"
+                   android:padding="@dimen/xlargePadding"
+                   >
+
+                   <androidx.appcompat.widget.LinearLayoutCompat
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       >
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:hint="Operator"
+                           android:inputType="number"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Consumer ID"
+                           android:inputType="number"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Amount"
+                           android:inputType="number"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                   </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:gravity="center_vertical"
+                   android:layout_margin="@dimen/tenDpMargin"
+                   >
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center_horizontal"
+                       android:text="Note:"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Your service provider may take upto two working days to consider bill paid
+in their accounts."
+                       android:layout_marginStart="@dimen/defaultDpMargin"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+           </androidx.appcompat.widget.LinearLayoutCompat>
+
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:orientation="vertical"
+               android:padding="@dimen/mediumPadding"
+               android:visibility="gone"
+               android:id="@+id/bbps_electricity_layout"
+
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               >
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/money_transfer_bg"
+                   android:padding="@dimen/largePadding"
+                   />
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/round_bg_with_full_border"
+                   android:padding="@dimen/xlargePadding"
+                   >
+
+                   <androidx.appcompat.widget.LinearLayoutCompat
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       >
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:hint="Operator"
+                           android:inputType="number"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Consumer ID"
+                           android:inputType="number"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Amount"
+                           android:inputType="number"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                   </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:gravity="center_vertical"
+                   android:layout_margin="@dimen/tenDpMargin"
+                   >
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center_horizontal"
+                       android:text="Note:"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Your service provider may take upto two working days to consider bill paid
+in their accounts."
+                       android:layout_marginStart="@dimen/defaultDpMargin"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+           </androidx.appcompat.widget.LinearLayoutCompat>
+
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:orientation="vertical"
+               android:padding="@dimen/mediumPadding"
+               android:id="@+id/bbps_cable_tv_layout"
+               android:visibility="gone"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               >
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/money_transfer_bg"
+                   android:padding="@dimen/largePadding"
+                   />
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/round_bg_with_full_border"
+                   android:padding="@dimen/xlargePadding"
+                   >
+
+                   <androidx.appcompat.widget.LinearLayoutCompat
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       >
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:hint="Biller/ Operator"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:focusableInTouchMode="false"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Subscriber Code"
+                           android:inputType="text"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Consumer Mobile Number"
+                           android:inputType="phone"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                   </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:gravity="center_vertical"
+                   android:layout_margin="@dimen/tenDpMargin"
+                   >
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center_horizontal"
+                       android:text="Note:"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Your service provider may take upto two working days to consider bill paid
+in their accounts."
+                       android:layout_marginStart="@dimen/defaultDpMargin"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+           </androidx.appcompat.widget.LinearLayoutCompat>
+
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:orientation="vertical"
+               android:padding="@dimen/mediumPadding"
+               android:id="@+id/bbps_post_paid_layout"
+               android:visibility="gone"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               >
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/money_transfer_bg"
+                   android:padding="@dimen/largePadding"
+                   />
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/round_bg_with_full_border"
+                   android:padding="@dimen/xlargePadding"
+                   >
+
+                   <androidx.appcompat.widget.LinearLayoutCompat
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       >
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Enter Mobile Number"
+                           android:inputType="phone"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Amount"
+                           android:inputType="number"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                   </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:gravity="center_vertical"
+                   android:layout_margin="@dimen/tenDpMargin"
+                   >
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center_horizontal"
+                       android:text="Note:"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Your service provider may take upto two working days to consider bill paid
+in their accounts."
+                       android:layout_marginStart="@dimen/defaultDpMargin"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+           </androidx.appcompat.widget.LinearLayoutCompat>
+
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:orientation="vertical"
+               android:padding="@dimen/mediumPadding"
+               android:id="@+id/bbps_gas_booking_layout"
+               android:visibility="gone"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               >
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/money_transfer_bg"
+                   android:padding="@dimen/largePadding"
+                   />
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/round_bg_with_full_border"
+                   android:padding="@dimen/xlargePadding"
+                   >
+
+                   <androidx.appcompat.widget.LinearLayoutCompat
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       >
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:hint="Biller/ Operator"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:focusableInTouchMode="false"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Registered Contact Number"
+                           android:inputType="phone"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="LPG ID"
+                           android:inputType="number"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Consumer Mobile Number"
+                           android:inputType="phone"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                   </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:gravity="center_vertical"
+                   android:layout_margin="@dimen/tenDpMargin"
+                   >
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center_horizontal"
+                       android:text="Note:"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Your service provider may take upto two working days to consider bill paid
+in their accounts."
+                       android:layout_marginStart="@dimen/defaultDpMargin"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+           </androidx.appcompat.widget.LinearLayoutCompat>
+
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:orientation="vertical"
+               android:padding="@dimen/mediumPadding"
+               android:id="@+id/bbps_water_bill_layout"
+               android:visibility="gone"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               >
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/money_transfer_bg"
+                   android:padding="@dimen/largePadding"
+                   />
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/round_bg_with_full_border"
+                   android:padding="@dimen/xlargePadding"
+                   >
+
+                   <androidx.appcompat.widget.LinearLayoutCompat
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       >
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Biller/ Operator"
+                           android:focusableInTouchMode="false"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Consumer ID"
+                           android:inputType="number"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Consumer Mobile Number"
+                           android:inputType="phone"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                   </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:gravity="center_vertical"
+                   android:layout_margin="@dimen/tenDpMargin"
+                   >
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center_horizontal"
+                       android:text="Note:"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Your service provider may take upto two working days to consider bill paid
+in their accounts."
+                       android:layout_marginStart="@dimen/defaultDpMargin"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+           </androidx.appcompat.widget.LinearLayoutCompat>
+
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:orientation="vertical"
+               android:padding="@dimen/mediumPadding"
+               android:id="@+id/bbps_broadband_layout"
+               android:visibility="gone"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               >
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/money_transfer_bg"
+                   android:padding="@dimen/largePadding"
+                   />
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/round_bg_with_full_border"
+                   android:padding="@dimen/xlargePadding"
+                   >
+
+                   <androidx.appcompat.widget.LinearLayoutCompat
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       >
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Biller/ Operator"
+                           android:focusableInTouchMode="false"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Amount"
+                           android:inputType="number"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                   </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:gravity="center_vertical"
+                   android:layout_margin="@dimen/tenDpMargin"
+                   >
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center_horizontal"
+                       android:text="Note:"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Your service provider may take upto two working days to consider bill paid
+in their accounts."
+                       android:layout_marginStart="@dimen/defaultDpMargin"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+           </androidx.appcompat.widget.LinearLayoutCompat>
+
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:orientation="vertical"
+               android:padding="@dimen/mediumPadding"
+               android:id="@+id/bbps_loan_repayment_layout"
+               android:visibility="gone"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               >
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/money_transfer_bg"
+                   android:padding="@dimen/largePadding"
+                   />
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/round_bg_with_full_border"
+                   android:padding="@dimen/xlargePadding"
+                   >
+
+                   <androidx.appcompat.widget.LinearLayoutCompat
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       >
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Biller/ Operator"
+                           android:focusableInTouchMode="false"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Loan Account Number"
+                           android:inputType="text"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Mobile"
+                           android:inputType="phone"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Consumer Mobile Number"
+                           android:inputType="phone"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                   </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:gravity="center_vertical"
+                   android:layout_margin="@dimen/tenDpMargin"
+                   >
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center_horizontal"
+                       android:text="Note:"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Your service provider may take upto two working days to consider bill paid
+in their accounts."
+                       android:layout_marginStart="@dimen/defaultDpMargin"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+           </androidx.appcompat.widget.LinearLayoutCompat>
+
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:orientation="vertical"
+               android:padding="@dimen/mediumPadding"
+               android:id="@+id/bbps_prepaid_recharge_layout"
+               android:visibility="gone"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               >
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/money_transfer_bg"
+                   android:padding="@dimen/largePadding"
+                   />
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/round_bg_with_full_border"
+                   android:padding="@dimen/xlargePadding"
+                   >
+
+                   <androidx.appcompat.widget.LinearLayoutCompat
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       >
+
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Enter Mobile Number"
+                           android:inputType="phone"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Amount"
+                           android:inputType="number"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                   </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:gravity="center_vertical"
+                   android:layout_margin="@dimen/tenDpMargin"
+                   >
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center_horizontal"
+                       android:text="Note:"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Your service provider may take upto two working days to consider bill paid
+in their accounts."
+                       android:layout_marginStart="@dimen/defaultDpMargin"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+           </androidx.appcompat.widget.LinearLayoutCompat>
+
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:orientation="vertical"
+               android:padding="@dimen/mediumPadding"
+               android:id="@+id/bbps_fastag_layout"
+               android:visibility="gone"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               >
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/money_transfer_bg"
+                   android:padding="@dimen/largePadding"
+                   />
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/round_bg_with_full_border"
+                   android:padding="@dimen/xlargePadding"
+                   >
+
+                   <androidx.appcompat.widget.LinearLayoutCompat
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       >
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Biller/ Operator"
+                           android:focusableInTouchMode="false"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Vehicle Registration Number"
+                           android:inputType="text"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Consumer Mobile Number"
+                           android:inputType="phone"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                   </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:gravity="center_vertical"
+                   android:layout_margin="@dimen/tenDpMargin"
+                   >
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center_horizontal"
+                       android:text="Note:"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Your service provider may take upto two working days to consider bill paid
+in their accounts."
+                       android:layout_marginStart="@dimen/defaultDpMargin"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+           </androidx.appcompat.widget.LinearLayoutCompat>
+
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:orientation="vertical"
+               android:padding="@dimen/mediumPadding"
+               android:id="@+id/bbps_piped_gas_layout"
+              android:visibility="gone"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               >
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/money_transfer_bg"
+                   android:padding="@dimen/largePadding"
+                   />
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/round_bg_with_full_border"
+                   android:padding="@dimen/xlargePadding"
+                   >
+
+                   <androidx.appcompat.widget.LinearLayoutCompat
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       >
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Biller/ Operator"
+                           android:focusableInTouchMode="false"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Customer No."
+                           android:inputType="text"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Consumer Mobile Number"
+                           android:inputType="phone"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                   </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:gravity="center_vertical"
+                   android:layout_margin="@dimen/tenDpMargin"
+                   >
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center_horizontal"
+                       android:text="Note:"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Your service provider may take upto two working days to consider bill paid
+in their accounts."
+                       android:layout_marginStart="@dimen/defaultDpMargin"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+           </androidx.appcompat.widget.LinearLayoutCompat>
+
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:orientation="vertical"
+               android:padding="@dimen/mediumPadding"
+               android:id="@+id/bbps_credit_card_layout"
+               android:visibility="gone"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               >
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/money_transfer_bg"
+                   android:padding="@dimen/largePadding"
+                   />
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/round_bg_with_full_border"
+                   android:padding="@dimen/xlargePadding"
+                   >
+
+                   <androidx.appcompat.widget.LinearLayoutCompat
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       >
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Card Number"
+                           android:inputType="number"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Name On Card"
+                           android:inputType="text"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Card Holder Mobile Number"
+                           android:inputType="phone"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Bill Amount"
+                           android:inputType="number"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+                   </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:gravity="center_vertical"
+                   android:layout_margin="@dimen/tenDpMargin"
+                   >
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center_horizontal"
+                       android:text="Note:"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Your service provider may take upto two working days to consider bill paid
+in their accounts."
+                       android:layout_marginStart="@dimen/defaultDpMargin"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+           </androidx.appcompat.widget.LinearLayoutCompat>
+
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:orientation="vertical"
+               android:padding="@dimen/mediumPadding"
+               android:id="@+id/bbps_insurance_layout"
+               android:visibility="gone"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               >
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/money_transfer_bg"
+                   android:padding="@dimen/largePadding"
+                   />
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/round_bg_with_full_border"
+                   android:padding="@dimen/xlargePadding"
+                   >
+
+                   <androidx.appcompat.widget.LinearLayoutCompat
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       >
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Biller/ Operator"
+                           android:focusableInTouchMode="false"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Policy Number"
+                           android:inputType="text"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Consumer Mobile Number"
+                           android:inputType="phone"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                   </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+           </androidx.appcompat.widget.LinearLayoutCompat>
+
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:orientation="vertical"
+               android:padding="@dimen/mediumPadding"
+               android:id="@+id/bbps_cable_tv1_layout"
+              android:visibility="gone"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               >
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/money_transfer_bg"
+                   android:padding="@dimen/largePadding"
+                   />
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/round_bg_with_full_border"
+                   android:padding="@dimen/xlargePadding"
+                   >
+
+                   <androidx.appcompat.widget.LinearLayoutCompat
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       >
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:hint="Operator"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:focusableInTouchMode="false"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Consumer ID"
+                           android:inputType="text"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Amount"
+                           android:inputType="number"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                   </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:gravity="center_vertical"
+                   android:layout_margin="@dimen/tenDpMargin"
+                   >
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center_horizontal"
+                       android:text="Note:"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Your service provider may take upto two working days to consider bill paid
+in their accounts."
+                       android:layout_marginStart="@dimen/defaultDpMargin"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+           </androidx.appcompat.widget.LinearLayoutCompat>
+
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:orientation="vertical"
+               android:padding="@dimen/mediumPadding"
+               android:id="@+id/bbps_municipal_taxes_layout"
+               android:visibility="gone"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               >
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/money_transfer_bg"
+                   android:padding="@dimen/largePadding"
+                   />
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/round_bg_with_full_border"
+                   android:padding="@dimen/xlargePadding"
+                   >
+
+                   <androidx.appcompat.widget.LinearLayoutCompat
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       >
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Operator"
+                           android:focusableInTouchMode="false"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Number"
+                           android:inputType="text"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+
+                   </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:gravity="center_vertical"
+                   android:layout_margin="@dimen/tenDpMargin"
+                   >
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center_horizontal"
+                       android:text="Note:"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Your service provider may take upto two working days to consider bill paid
+in their accounts."
+                       android:layout_marginStart="@dimen/defaultDpMargin"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+           </androidx.appcompat.widget.LinearLayoutCompat>
+
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:orientation="vertical"
+               android:padding="@dimen/mediumPadding"
+               android:id="@+id/bbps_digital_voucher_layout"
+               android:visibility="gone"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               >
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/money_transfer_bg"
+                   android:padding="@dimen/largePadding"
+                   />
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/round_bg_with_full_border"
+                   android:padding="@dimen/xlargePadding"
+                   >
+
+                   <androidx.appcompat.widget.LinearLayoutCompat
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       >
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Select OTT"
+                           android:focusableInTouchMode="false"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Plan"
+                           android:inputType="text"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+
+                   </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+           </androidx.appcompat.widget.LinearLayoutCompat>
+
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:orientation="vertical"
+               android:padding="@dimen/mediumPadding"
+               android:id="@+id/bbps_traffic_challan_layout"
+              android:visibility="gone"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               >
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/money_transfer_bg"
+                   android:padding="@dimen/largePadding"
+                   />
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/round_bg_with_full_border"
+                   android:padding="@dimen/xlargePadding"
+                   >
+
+                   <androidx.appcompat.widget.LinearLayoutCompat
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       >
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Operator"
+                           android:focusableInTouchMode="false"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Number"
+                           android:inputType="text"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+
+                   </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:gravity="center_vertical"
+                   android:layout_margin="@dimen/tenDpMargin"
+                   >
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center_horizontal"
+                       android:text="Note:"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Your service provider may take upto two working days to consider bill paid
+in their accounts."
+                       android:layout_marginStart="@dimen/defaultDpMargin"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+           </androidx.appcompat.widget.LinearLayoutCompat>
+
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:orientation="vertical"
+               android:padding="@dimen/mediumPadding"
+               android:id="@+id/bbps_emi_layout"
+               android:visibility="gone"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               >
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/money_transfer_bg"
+                   android:padding="@dimen/largePadding"
+                   />
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/round_bg_with_full_border"
+                   android:padding="@dimen/xlargePadding"
+                   >
+
+                   <androidx.appcompat.widget.LinearLayoutCompat
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       >
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Biller/ Operator"
+                           android:focusableInTouchMode="false"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Loan Account Number"
+                           android:inputType="number"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Mobile Number"
+                           android:inputType="phone"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                   </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:gravity="center_vertical"
+                   android:layout_margin="@dimen/tenDpMargin"
+                   >
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center_horizontal"
+                       android:text="Note:"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Your service provider may take upto two working days to consider bill paid
+in their accounts."
+                       android:layout_marginStart="@dimen/defaultDpMargin"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+           </androidx.appcompat.widget.LinearLayoutCompat>
+
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:orientation="vertical"
+               android:padding="@dimen/mediumPadding"
+               android:id="@+id/bbps_datacard_prepaid_layout"
+               android:visibility="gone"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               >
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/money_transfer_bg"
+                   android:padding="@dimen/largePadding"
+                   />
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="@dimen/TwentyDpMargin"
+                   android:background="@drawable/round_bg_with_full_border"
+                   android:padding="@dimen/xlargePadding"
+                   >
+
+                   <androidx.appcompat.widget.LinearLayoutCompat
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       >
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Operator"
+                           android:focusableInTouchMode="false"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="@dimen/sixteenDpMargin"
+                           android:hint="Number"
+                           android:inputType="text"
+                           android:textSize="@dimen/sixteenTextSize"
+                           android:textColorHint="#8F8F8F"
+                           android:background="@color/white"
+                           />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="2dp"
+                           android:background="@color/gray"
+                           android:layout_marginTop="@dimen/tenDpMargin"
+                           />
+
+
+                   </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:gravity="center_vertical"
+                   android:layout_margin="@dimen/tenDpMargin"
+                   >
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center_horizontal"
+                       android:text="Note:"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+
+                   <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Your service provider may take upto two working days to consider bill paid
+in their accounts."
+                       android:layout_marginStart="@dimen/defaultDpMargin"
+                       android:textColor="@color/primary"
+                       android:textSize="@dimen/xsmallTextSize"
+                       />
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+           </androidx.appcompat.widget.LinearLayoutCompat>
+
+           <androidx.appcompat.widget.AppCompatButton
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               android:text="Pay"
+               android:id="@+id/bbps_pay_btn"
+               android:textAllCaps="false"
+               android:padding="@dimen/xlargePadding"
+               android:background="@drawable/round_bg_with_primary_color"
+               android:textSize="@dimen/sixteenTextSize"
+               android:textColor="@color/white"
+               android:layout_margin="@dimen/tenDpMargin"
+               />
+       </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
